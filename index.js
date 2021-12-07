@@ -17,7 +17,7 @@ function getRandomSymbol() {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-// adding a all functions into a object called randomFunc
+// add all functions together
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
@@ -25,7 +25,7 @@ const randomFunc = {
     symbol: getRandomSymbol,
 };
 
-// adding a click event listner to generate button
+// adding a click event listener
 const generate = document.getElementById("generateBtn");
 generate.addEventListener("click", () => {
     const length = document.getElementById("Passwordlength").value;
@@ -41,10 +41,10 @@ generate.addEventListener("click", () => {
         hasSymbol,
         length
     );
-    // console.log(hasLower, hasUpper, hasNumber, hasSymbol);
+    // console.log
 });
 
-// function for generating random password
+// generate random password
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = "";
     const typesCount = lower + upper + number + symbol;
@@ -69,7 +69,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 
 // copy to clipboard
 let button = document.getElementById("clipboardBtn");
-// add click event listner on button
+// add click event listener on button
 button.addEventListener("click", (e) => {
     e.preventDefault();
     // execute command for copy text by selecting textarea text with id
